@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+- iojs
+deploy:
+  provider: npm
+  email: bvdrucker@gmail.com
+  api_key:
+    secure: cckGtZrg+6dvMnWpXxZq/fN+HzmWerNqyxqK0yiAHBqpGrk7tLE9byX42Uo7NiSPoc6ADPgwvJIjU/ev1i5YzQDWlXJnAX1rnUTC+6xXj14zx28VJP+/vrQvaBNJuBIie38bBLX+65ZBE/n6lrM9r4jFPc9G+80GY0OjvDwi3+E=
+  on:
+    tags: true
+    all_branches: true
+    repo: bendrucker/dot-slash
