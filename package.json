@@ -4,7 +4,7 @@
   "description": "Normalize and detect the \"./\" relative path prefix",
   "main": "./src",
   "scripts": {
-    "test": "tape test/*.js"
+    "test": "standard && tape test/*.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/bendrucker/dot-slash",
   "devDependencies": {
+    "standard": "~3.7.3",
     "tape": "~3.5.0"
   }
 }

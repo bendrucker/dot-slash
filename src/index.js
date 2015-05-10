@@ -1,20 +1,20 @@
-'use strict';
+'use strict'
 
-exports.has = hasPrefix;
+exports.has = hasPrefix
 function hasPrefix (path) {
-  return /^\.\//.test(path);
+  return /^\.\//.test(path)
 }
 
-exports.enforce = enforce;
+exports.enforce = enforce
 function enforce (path, prefix) {
-  if (typeof prefix === 'undefined') prefix = true;
-  var has = hasPrefix(path);
-  if (has && prefix) return path;
-  if (!has && prefix) return './' + path;
-  if (has && !prefix) return path.substring(2, path.length);
-  return path;
+  if (typeof prefix === 'undefined') prefix = true
+  var has = hasPrefix(path)
+  if (has && prefix) return path
+  if (!has && prefix) return './' + path
+  if (has && !prefix) return path.substring(2, path.length)
+  return path
 }
 
 exports.normalize = function normalize (sourcePath, matchPath) {
-  return enforce(sourcePath, hasPrefix(matchPath));
-};
+  return enforce(sourcePath, hasPrefix(matchPath))
+}

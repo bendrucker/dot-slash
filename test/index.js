@@ -1,14 +1,14 @@
-'use strict';
+'use strict'
 
-var test = require('tape');
-var ds = require('../');
+var test = require('tape')
+var ds = require('../')
 
 test('has', function (t) {
-  t.ok(ds.has('./foo'));
-  t.notOk(ds.has('foo'));
-  t.notOk(ds.has('../foo'));
-  t.end();
-});
+  t.ok(ds.has('./foo'))
+  t.notOk(ds.has('foo'))
+  t.notOk(ds.has('../foo'))
+  t.end()
+})
 
 test('enforce', function (t) {
   t.equal(ds.enforce('foo'), './foo')
@@ -19,10 +19,9 @@ test('enforce', function (t) {
 })
 
 test('normalize', function (t) {
-  t.equal(ds.normalize('foo', 'bar'),'foo', 'noop');
-  t.equal(ds.normalize('./foo', './bar'),'./foo', 'noop ./');
-  t.equal(ds.normalize('foo', './bar'),'./foo', 'add ./');
-  t.equal(ds.normalize('./foo', 'bar'),'foo', 'remove ./');
-  t.end();
-});
-
+  t.equal(ds.normalize('foo', 'bar'), 'foo', 'noop')
+  t.equal(ds.normalize('./foo', './bar'), './foo', 'noop ./')
+  t.equal(ds.normalize('foo', './bar'), './foo', 'add ./')
+  t.equal(ds.normalize('./foo', 'bar'), 'foo', 'remove ./')
+  t.end()
+})
