@@ -1,6 +1,6 @@
 {
   "name": "dot-slash",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Normalize and detect the \"./\" relative path prefix",
   "main": "./src",
   "scripts": {
