@@ -17,6 +17,14 @@ Checks whether the supplied relative `path` begins with `'./'`
 ds.has('./foo') // => true
 ```
 
+##### `ds.enforce(path, prefix)` -> `String`
+
+Ensures that the path is or is not prefixed with `'./'`, depending on `prefix`. If only one argument is passed, `prefix` is set to `true`.
+
+```js
+ds.enforce('foo', true) // => './foo'
+```
+
 ##### `ds.normalize(source, destination)` -> `String`
 
 Normalizes the `source` relative path to the same `'./'` usage as the `destination` path. 

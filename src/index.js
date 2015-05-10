@@ -5,10 +5,16 @@ function hasPrefix (path) {
   return /^\.\//.test(path);
 }
 
+exports.enforce = enforce;
+function enforce (path, prefix) {
+  if (typeof prefix === 'undefined') prefix = true;
+  var has = hasPrefix(path);
+  if (has && prefix) return path;
+  if (!has && prefix) return './' + path;
+  if (has && !prefix) return path.substring(2, path.length);
+  return path;
+}
+
 exports.normalize = function normalize (sourcePath, matchPath) {
-  var sourceHas = hasPrefix(sourcePath);
-  var matchHas = hasPrefix(matchPath);
-  if (sourceHas === matchHas) return sourcePath;
-  if (!sourceHas && matchHas) return './' + sourcePath;
-  if (sourceHas && !matchHas) return sourcePath.substr(2, sourcePath.length);
+  return enforce(sourcePath, hasPrefix(matchPath));
 };
