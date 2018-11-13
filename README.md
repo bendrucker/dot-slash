@@ -1,4 +1,4 @@
-# dot-slash [![Build Status](https://travis-ci.org/bendrucker/dot-slash.svg?branch=master)](https://travis-ci.org/bendrucker/dot-slash)
+# dot-slash [![Build Status](https://travis-ci.org/bendrucker/dot-slash.svg?branch=master)](https://travis-ci.org/bendrucker/dot-slash) [![Greenkeeper badge](https://badges.greenkeeper.io/bendrucker/dot-slash.svg)](https://greenkeeper.io/)
 Normalize and detect the "./" relative path prefix
 
 ## Installing
